@@ -132,7 +132,17 @@ conda activate verifastscore</code></pre>
 
 <h2>📖 Citation</h2>
 
-<pre><code>TBD</code></pre>
+<pre><code>
+@misc{rajendhran2025verifastscorespeedinglongformfactuality,
+      title={VeriFastScore: Speeding up long-form factuality evaluation}, 
+      author={Rishanth Rajendhran and Amir Zadeh and Matthew Sarte and Chuan Li and Mohit Iyyer},
+      year={2025},
+      eprint={2505.16973},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.16973}, 
+}
+</code></pre>
 
 <hr />
 
