@@ -3,6 +3,21 @@
 <p><strong>VeriFastScore</strong> is a fast and efficient factuality evaluation tool that jointly extracts and verifies fine-grained factual claims from long-form LLM-generated responses, conditioned on retrieved web evidence.</p>
 
 <p>This repository packages VeriFastScore as a pip-installable Python package with a command-line interface (<code>verifastscore</code>), simplifying usage and deployment.</p>
+<hr />
+
+<h1>HuggingFace Links</h1>
+<ul>
+  <li>
+    <a href="https://huggingface.co/rishanthrajendhran/VeriFastScore" target="_blank">
+      Model
+    </a>
+  </li>
+  <li>
+    <a href="https://huggingface.co/datasets/rishanthrajendhran/VeriFastScore" target="_blank">
+      Dataset
+    </a>
+  </li>
+</ul>
 
 <hr />
 
@@ -80,7 +95,7 @@ source ~/.bashrc
 <p>The input must be a <code>.jsonl</code> file with the following structure:</p>
 
 <pre>{
-  "question": "What is the capital of France?",
+  "question" [Optional]: "What is the capital of France?",
   "response": "The capital of France is Paris.",
   "prompt_source"  [Optional]: "tulu", 
   "model" [Optional]: "gpt-4o"
