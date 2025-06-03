@@ -35,6 +35,10 @@ pip install -e .
 <pre><code>pip install git+https://github.com/rishanthrajendhran/verifastscore.git
 </code></pre>
 
+<h3>▶️ Option 3: Install directly using pip</h3>
+<pre><code>pip install verifastscore
+</code></pre>
+
 <hr />
 
 <h2>🔐 Set Your SERPER API Key</h2>
