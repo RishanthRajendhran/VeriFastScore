@@ -2,7 +2,7 @@
 
 <p><strong>VeriFastScore</strong> is a fast and efficient factuality evaluation tool that jointly extracts and verifies fine-grained factual claims from long-form LLM-generated responses, conditioned on retrieved web evidence.</p>
 
-<p>This repository packages VeriFastScore as a pip-installable Python package with a command-line interface (<code>verifastscore</code>), simplifying usage and deployment.</p>
+<p>This <a href="https://github.com/RishanthRajendhran/VeriFastScore" target="_blank">repository</a> packages VeriFastScore as a pip-installable Python package with a command-line interface (<code>verifastscore</code>), simplifying usage and deployment.</p>
 <hr />
 
 <h1>HuggingFace Links</h1>
@@ -23,20 +23,35 @@
 
 <h2>📦 Installation</h2>
 
-<p>You can install the package either locally or directly from GitHub.</p>
+<p><strong>VeriFastScore</strong> supports both CPU and GPU setups. Please follow the appropriate instructions below:</p>
 
-<h3>▶️ Option 1: Local installation (for development)</h3>
+<h3>▶️ CPU Installation [Default]</h3>
+<p>To install VeriFastScore for CPU-only usage:</p>
+<pre><code>pip install verifastscore
+python3 -m spacy download en_core_web_sm
+</code></pre>
+
+<h3>▶️ GPU Installation (with FlashAttention) [Recommended]</h3>
+<p>If you want GPU acceleration with FlashAttention, you must install compatible versions of <code>torch</code> and <code>flash-attn</code> manually before installing <code>verifastscore</code>.</p>
+
+<pre><code># Install CUDA-enabled PyTorch (adjust for your CUDA version)
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+
+# Install flash-attn (manually, requires build tools and matching CUDA)
+pip install flash-attn --no-build-isolation
+
+# Then install verifastscore
+pip install verifastscore
+
+# Finally, download the spaCy model
+python3 -m spacy download en_core_web_sm
+</code></pre>
+
+<h3>▶️ Development install (local)</h3>
 <pre><code>git clone https://github.com/rishanthrajendhran/verifastscore.git
 cd verifastscore
 pip install -e .
-</code></pre>
-
-<h3>▶️ Option 2: Install directly from GitHub</h3>
-<pre><code>pip install git+https://github.com/rishanthrajendhran/verifastscore.git
-</code></pre>
-
-<h3>▶️ Option 3: Install directly using pip</h3>
-<pre><code>pip install verifastscore
+python3 -m spacy download en_core_web_sm
 </code></pre>
 
 <hr />
