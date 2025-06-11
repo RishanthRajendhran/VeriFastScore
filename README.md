@@ -1,12 +1,17 @@
 <h1>🔍⚡ VeriFastScore</h1>
 
-<p><strong>VeriFastScore</strong> is a fast and efficient factuality evaluation tool that jointly extracts and verifies fine-grained factual claims from long-form LLM-generated responses, conditioned on retrieved web evidence.</p>
+<p><strong>VeriFastScore</strong> is a fast and efficient factuality evaluation tool that jointly extracts and verifies fine-grained factual claims from long-form LLM-generated responses, conditioned on evidence collated from google search results retrieved using <a href="https://serper.dev" target="_blank">SERPER</a> API.</p>
 
 <p>This <a href="https://github.com/RishanthRajendhran/VeriFastScore" target="_blank">repository</a> packages VeriFastScore as a pip-installable Python package with a command-line interface (<code>verifastscore</code>), simplifying usage and deployment.</p>
 <hr />
 
-<h1>HuggingFace Links</h1>
+<h1>Important Links</h1>
 <ul>
+  <li>
+    <a href="https://arxiv.org/abs/2505.16973" target="_blank">
+      Paper
+    </a>
+  </li> 
   <li>
     <a href="https://huggingface.co/rishanthrajendhran/VeriFastScore" target="_blank">
       Model
@@ -102,7 +107,7 @@ source ~/.bashrc
     <tr><td><code>--data_dir</code></td><td>str</td><td><code>./data</code></td><td>Directory for input files.</td></tr>
     <tr><td><code>--output_dir</code></td><td>str</td><td><code>./data</code></td><td>Where to write outputs.</td></tr>
     <tr><td><code>--cache_dir</code></td><td>str</td><td><code>./data/cache</code></td><td>Directory to store SERPER search cache.</td></tr>
-    <tr><td><code>--model_name</code></td><td>str</td><td><code>rishanthrajendhran/VeriFastScore</code></td><td>Hugging Face model name or local path.</td></tr>
+    <tr><td><code>--model_name</code></td><td>str</td><td><code>rishanthrajendhran/VeriFastScore</code></td><td>Hugging Face model name or local path. The default value is the path to the trained VeriFastScore model on HuggingFace. Do not change this path unless you want to test your own trained model.</td></tr>
     <tr><td><code>--search_res_num</code></td><td>int</td><td><code>10</code></td><td>Evidence snippets per sentence.</td></tr>
   </tbody>
 </table>
@@ -114,13 +119,13 @@ source ~/.bashrc
 <p>The input must be a <code>.jsonl</code> file with the following structure:</p>
 
 <pre>{
-  "question" [Optional]: "What is the capital of France?",
   "response": "The capital of France is Paris.",
-  "prompt_source"  [Optional]: "tulu", 
-  "model" [Optional]: "gpt-4o"
+  [...]
 }</pre>
 
 <p>Place the file in the <code>--data_dir</code> directory.</p>
+
+<p>A sample input file containing two instances can be found at ./verifastscore/data/data_sample.jsonl</p>
 
 <hr />
 
