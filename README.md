@@ -5,6 +5,8 @@
 <p>This <a href="https://github.com/RishanthRajendhran/VeriFastScore" target="_blank">repository</a> packages VeriFastScore as a pip-installable Python package with a command-line interface (<code>verifastscore</code>), simplifying usage and deployment.</p>
 <hr />
 
+<p>Coming soon: Dynamic Batching to further imrpove speedups and add support for multi-GPU usage</p>
+
 <h1>Important Links</h1>
 <ul>
   <li>
