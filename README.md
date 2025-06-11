@@ -107,7 +107,7 @@ source ~/.bashrc
     <tr><td><code>--data_dir</code></td><td>str</td><td><code>./data</code></td><td>Directory for input files.</td></tr>
     <tr><td><code>--output_dir</code></td><td>str</td><td><code>./data</code></td><td>Where to write outputs.</td></tr>
     <tr><td><code>--cache_dir</code></td><td>str</td><td><code>./data/cache</code></td><td>Directory to store SERPER search cache.</td></tr>
-    <tr><td><code>--model_name</code></td><td>str</td><td><code>rishanthrajendhran/VeriFastScore</code></td><td>Hugging Face model name or local path. The default value is the path to the trained VeriFastScore model on HuggingFace. Do not change this path unless you want to test your own trained model.</td></tr>
+    <tr><td><code>--model_name</code></td><td>str</td><td><code>rishanthrajendhran/VeriFastScore</code></td><td>Hugging Face model name or local path. The default value is the path to the trained VeriFastScore model on HuggingFace. Do not change this path unless you want to test your own model.</td></tr>
     <tr><td><code>--search_res_num</code></td><td>int</td><td><code>10</code></td><td>Evidence snippets per sentence.</td></tr>
   </tbody>
 </table>
@@ -125,7 +125,7 @@ source ~/.bashrc
 
 <p>Place the file in the <code>--data_dir</code> directory.</p>
 
-<p>A sample input file containing two instances can be found at ./verifastscore/data/data_sample.jsonl</p>
+<p>A sample input file can be found <a href="verifastscore/data/data_sample.jsonl" target="_blank">here</a></p>
 
 <hr />
 
